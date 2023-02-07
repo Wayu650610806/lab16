@@ -12,8 +12,32 @@ int main(){
 	
 	for(int i = 0;i < 10;i++){
 	    shuffle(a,b,c,d);
-	    cout << a << " " << b << " " << c << " " << d << "\n";
+	    cout << a << " " << b << " " << c << " " <<d << "\n";
 	}
 	
 	return 0;
+}
+void shuffle(int &a, int &b, int &c, int&d){
+	int ans=rand()%4;
+	int f=a,s=b,t=c,fo=d;
+	switch (ans)
+	{
+	case 0:
+		a=s;
+		b=f;
+		break;
+	case 1:
+		c=t;
+		d=fo;
+		break;
+	case 2:
+		a=t;
+		b=f;
+		c=fo;
+		d=s;
+		break;
+	case 3:
+		a=fo;
+		d=f;
+	}
 }
